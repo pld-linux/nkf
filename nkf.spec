@@ -8,7 +8,7 @@ Summary(pl):	Sieciowy filtr konwertuj±cy kod Kanji
 Name:		nkf
 Version:	2.02
 %define	fver	%(echo %{version} | tr -d .)
-Release:	1
+Release:	2
 License:	BSD-like
 Group:		Applications/Text
 Source0:	http://www01.tcp-ip.or.jp/~furukawa/nkf_utf8/%{name}%{fver}.tar.gz
