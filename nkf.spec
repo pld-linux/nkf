@@ -73,12 +73,12 @@ cd NKF.mod
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1,%{_mandir}/ja/man1}
 
+%{__make} -C NKF.mod install \
+	DESTDIR=$RPM_BUILD_ROOT
+
 install nkf $RPM_BUILD_ROOT%{_bindir}
 install nkf.1 $RPM_BUILD_ROOT%{_mandir}/man1
 install nkf.1j $RPM_BUILD_ROOT%{_mandir}/ja/man1/nkf.1
-
-%{__make} install -C NKF.mod \
-	DESTDIR=$RPM_BUILD_ROOT
 
 %clean
 rm -rf $RPM_BUILD_ROOT
