@@ -8,13 +8,13 @@ Summary(pl):	Sieciowy filtr konwertuj±cy kod Kanji
 Name:		nkf
 Version:	2.02
 %define	fver	%(echo %{version} | tr -d .)
-Release:	2
+Release:	3
 License:	BSD-like
 Group:		Applications/Text
 Source0:	http://www01.tcp-ip.or.jp/~furukawa/nkf_utf8/%{name}%{fver}.tar.gz
 # Source0-md5:	5157b91879471b450997f4eec5af62e6
 URL:		http://www01.tcp-ip.or.jp/~furukawa/nkf_utf8/
-BuildRequires:	perl-devel >= 5.8.0
+BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
