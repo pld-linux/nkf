@@ -14,8 +14,8 @@ Group:		Applications/Text
 Source0:	http://www01.tcp-ip.or.jp/~furukawa/nkf_utf8/%{name}%{fver}.tar.gz
 # Source0-md5:	5157b91879471b450997f4eec5af62e6
 URL:		http://www01.tcp-ip.or.jp/~furukawa/nkf_utf8/
-BuildRequires:	perl-devel >= 5.8.0
-BuildRequires:	rpm-perlprov >= 4.1-13
+BuildRequires:	perl-devel >= 5.6.0
+BuildRequires:	rpm-perlprov >= 4.0.2-106
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -62,8 +62,7 @@ flag przed ostatnim argumentem.
 %{!?_without_tests:%{__make} test}
 
 cd NKF.mod
-%{__perl} Makefile.PL \
-	INSTALLDIRS=vendor
+%{__perl} Makefile.PL
 
 %{__make} \
 	OPTIMIZE="%{rpmcflags}"
@@ -93,8 +92,8 @@ rm -rf $RPM_BUILD_ROOT
 %files -n perl-NKF
 %defattr(644,root,root,755)
 %doc NKF.mod/{Changes,README}
-%{perl_vendorarch}/NKF.pm
-%dir %{perl_vendorarch}/auto/NKF
-%{perl_vendorarch}/auto/NKF/NKF.bs
-%attr(755,root,root) %{perl_vendorarch}/auto/NKF/NKF.so
+%{perl_sitearch}/NKF.pm
+%dir %{perl_sitearch}/auto/NKF
+%{perl_sitearch}/auto/NKF/NKF.bs
+%attr(755,root,root) %{perl_sitearch}/auto/NKF/NKF.so
 %{_mandir}/man3/*
