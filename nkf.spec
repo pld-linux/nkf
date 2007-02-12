@@ -4,7 +4,7 @@
 #
 %include	/usr/lib/rpm/macros.perl
 Summary:	Network Kanji code conversion Filter
-Summary(pl):	Sieciowy filtr konwertuj±cy kod Kanji
+Summary(pl.UTF-8):   Sieciowy filtr konwertujÄ…cy kod Kanji
 Name:		nkf
 Version:	2.02
 %define	fver	%(echo %{version} | tr -d .)
@@ -26,18 +26,18 @@ unique facicility of nkf is the guess of the input kanji code. It
 currently recognizes 7-bit JIS, MS-kanji (shifted-JIS), utf-8 and EUC.
 So users needn't the input kanji code specification.
 
-%description -l pl
-nkf to jeszcze jeden konwerter kodu kanji pomiêdzy sieciami, hostami i
-terminalami. Konwertuje wej¶cie w kodzie kanji do konkretnego kodu
-kanji, takiego jak 7-bitowy JIS, MS-kanji (przesuniêty JIS), utf-8 lub
-EUC. Jednym z unikalnych udogodnieñ nkf jest to, ¿e rozpoznaje
-wej¶ciowy kod kanji. Aktualnie rozpoznaje 7-bitowy JIS, MS-kanji
-(przesuniêty JIS), utf-8 i EUC. Dziêki temu u¿ytkownicy nie musz± znaæ
-specyfikacji wej¶ciowego kodu kanji.
+%description -l pl.UTF-8
+nkf to jeszcze jeden konwerter kodu kanji pomiÄ™dzy sieciami, hostami i
+terminalami. Konwertuje wejÅ›cie w kodzie kanji do konkretnego kodu
+kanji, takiego jak 7-bitowy JIS, MS-kanji (przesuniÄ™ty JIS), utf-8 lub
+EUC. Jednym z unikalnych udogodnieÅ„ nkf jest to, Å¼e rozpoznaje
+wejÅ›ciowy kod kanji. Aktualnie rozpoznaje 7-bitowy JIS, MS-kanji
+(przesuniÄ™ty JIS), utf-8 i EUC. DziÄ™ki temu uÅ¼ytkownicy nie muszÄ… znaÄ‡
+specyfikacji wejÅ›ciowego kodu kanji.
 
 %package -n perl-NKF
 Summary:	NKF - Perl extension for Network Kanji Filter
-Summary(pl):	NKF - rozszerzenie Perla dla sieciowy filtra Kanji
+Summary(pl.UTF-8):   NKF - rozszerzenie Perla dla sieciowy filtra Kanji
 Group:		Development/Languages/Perl
 
 %description -n perl-NKF
@@ -45,10 +45,10 @@ This is a Perl Extension version of nkf (Network Kanji Filter). It
 converts the last argument and return converted result. Conversion
 details are specified by flags before the last argument.
 
-%description -n perl-NKF -l pl
+%description -n perl-NKF -l pl.UTF-8
 To jest nkf (Network Kanji Filter - sieciowego filtra kanji) jako
 rozszerzenie Perla. Konwertuje tekst podany jako ostatni argument i
-zwraca wynik konwersji. Szczegó³y konwersji podaje siê przy pomocy
+zwraca wynik konwersji. SzczegÃ³Å‚y konwersji podaje siÄ™ przy pomocy
 flag przed ostatnim argumentem.
 
 %prep
