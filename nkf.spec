@@ -4,7 +4,7 @@
 #
 %include	/usr/lib/rpm/macros.perl
 Summary:	Network Kanji code conversion Filter
-Summary(pl.UTF-8):   Sieciowy filtr konwertujący kod Kanji
+Summary(pl.UTF-8):	Sieciowy filtr konwertujący kod Kanji
 Name:		nkf
 Version:	2.02
 %define	fver	%(echo %{version} | tr -d .)
@@ -37,7 +37,7 @@ specyfikacji wejściowego kodu kanji.
 
 %package -n perl-NKF
 Summary:	NKF - Perl extension for Network Kanji Filter
-Summary(pl.UTF-8):   NKF - rozszerzenie Perla dla sieciowy filtra Kanji
+Summary(pl.UTF-8):	NKF - rozszerzenie Perla dla sieciowy filtra Kanji
 Group:		Development/Languages/Perl
 
 %description -n perl-NKF
