@@ -95,6 +95,5 @@ rm -rf $RPM_BUILD_ROOT
 %doc NKF.mod/{Changes,README}
 %{perl_vendorarch}/NKF.pm
 %dir %{perl_vendorarch}/auto/NKF
-%{perl_vendorarch}/auto/NKF/NKF.bs
 %attr(755,root,root) %{perl_vendorarch}/auto/NKF/NKF.so
 %{_mandir}/man3/*
