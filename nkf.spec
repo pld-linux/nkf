@@ -2,7 +2,6 @@
 # Conditional build:
 %bcond_without tests		# do not perform "make test"
 #
-%include	/usr/lib/rpm/macros.perl
 Summary:	Network Kanji code conversion Filter
 Summary(pl.UTF-8):	Sieciowy filtr konwertujący kod Kanji
 Name:		nkf
