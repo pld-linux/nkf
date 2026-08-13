@@ -12,6 +12,7 @@ License:	BSD-like
 Group:		Applications/Text
 Source0:	http://www01.tcp-ip.or.jp/~furukawa/nkf_utf8/%{name}%{fver}.tar.gz
 # Source0-md5:	5157b91879471b450997f4eec5af62e6
+Patch0:		types.patch
 URL:		http://www01.tcp-ip.or.jp/~furukawa/nkf_utf8/
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
@@ -52,6 +53,7 @@ flag przed ostatnim argumentem.
 
 %prep
 %setup -q -n %{name}%{fver}
+%patch -P0 -p1
 
 %build
 %{__make} \

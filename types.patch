@@ -1,0 +1,20 @@
+--- nkf202/nkf.c.orig	2003-01-25 01:09:12.000000000 +0100
++++ nkf202/nkf.c	2026-08-13 21:13:19.328545280 +0200
+@@ -259,7 +259,7 @@
+ STATIC  int     kanji_convert PROTO((FILE *f));
+ STATIC  int     h_conv PROTO((FILE *f,int c2,int c1));
+ STATIC  int     push_hold_buf PROTO((int c2));
+-STATIC  void    set_iconv PROTO((int f, int (*iconv_func)()));
++STATIC  void    set_iconv PROTO((int f, int (*iconv_func)(int,int,int)));
+ STATIC  int     s_iconv PROTO((int c2,int c1,int c0));
+ STATIC  int     s2e_conv PROTO((int c2, int c1, int *p2, int *p1));
+ STATIC  int     e_iconv PROTO((int c2,int c1,int c0));
+@@ -1087,7 +1087,7 @@
+ #endif
+ {
+ #ifdef CHECK_OPTION
+-    static int (*iconv_for_check)() = 0;
++    static int (*iconv_for_check)(int, int, int) = 0;
+ #endif
+ #ifdef INPUT_CODE_FIX
+     if (f || !input_f)
